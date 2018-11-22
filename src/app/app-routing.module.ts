@@ -19,7 +19,8 @@ export const SECURE_ROUTES: Routes = [
 
 const routes: Routes = [
   { path: '', component: PublicComponent, canActivate: [], children: PUBLIC_ROUTES },
-  { path: '', component: SecureComponent, canActivate: [AuthenticateGuard], children: SECURE_ROUTES }
+  { path: '', component: SecureComponent, children: SECURE_ROUTES }
+  // canActivate: [AuthenticateGuard]
 ]
 
 @NgModule({
